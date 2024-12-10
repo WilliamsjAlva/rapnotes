@@ -1,0 +1,172 @@
+body {
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+body.dark {
+    background: linear-gradient(120deg, #1a0033, #3d0076, #000428);
+    color: white;
+}
+
+body.light {
+    background: linear-gradient(120deg, #ffffff, #e3f2fd, #bbdefb);
+    color: black;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+}
+
+@keyframes moveBall {
+    0% {
+        transform: translate(0, 0);
+        opacity: 0.8;
+    }
+
+    50% {
+        transform: translate(100px, -100px);
+        opacity: 0.3;
+    }
+
+    100% {
+        transform: translate(-50px, 50px);
+        opacity: 0.8;
+    }
+}
+
+@keyframes fadeBall {
+
+    0%,
+    100% {
+        opacity: 0.8;
+    }
+
+    50% {
+        opacity: 0.2;
+    }
+}
+
+.background .ball {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    filter: blur(100px);
+    animation: moveBall 12s infinite ease-in-out, fadeBall 8s infinite ease-in-out;
+}
+
+.background .ball:nth-child(1) {
+    top: 10%;
+    left: 20%;
+    background: rgba(186, 85, 211, 0.6);
+    animation-delay: 0s;
+}
+
+.background .ball:nth-child(2) {
+    top: 40%;
+    left: 50%;
+    background: rgba(135, 206, 250, 0.5);
+    animation-delay: 2s;
+}
+
+.background .ball:nth-child(3) {
+    top: 70%;
+    left: 10%;
+    background: rgba(222, 221, 231, 0.5);
+    animation-delay: 4s;
+}
+
+.background .ball:nth-child(4) {
+    top: 15%;
+    right: 20%;
+    background: rgba(147, 112, 219, 0.6);
+    animation-delay: 6s;
+}
+
+.background .ball:nth-child(5) {
+    top: 85%;
+    left: 65%;
+    background: rgba(0, 191, 255, 0.5);
+    animation-delay: 6s;
+}
+
+.background .ball:nth-child(6) {
+    top: 60%;
+    right: 10%;
+    background: rgba(255, 255, 255, 0.3);
+    animation-delay: 10s;
+}
+
+.background .ball:nth-child(7) {
+    top: 5%;
+    left: 80%;
+    background: rgba(186, 85, 211, 0.5);
+    animation-delay: 12s;
+}
+
+.background .ball:nth-child(8) {
+    top: 90%;
+    left: 5%;
+    background: rgba(135, 206, 250, 0.6);
+    animation-delay: 14s;
+}
+.background.light .ball:nth-child(1) {
+    top: 10%;
+    left: 20%;
+    background: rgba(255, 182, 193, 0.8);
+    animation-delay: 0s;
+}
+
+.background.light .ball:nth-child(2) {
+    top: 40%;
+    left: 50%;
+    background: rgba(173, 216, 230, 0.6);
+    animation-delay: 2s;
+}
+
+.background.light .ball:nth-child(3) {
+    top: 70%;
+    left: 10%;
+    background: rgba(255, 228, 225, 0.7);
+    animation-delay: 4s;
+}
+
+.background.light .ball:nth-child(4) {
+    top: 15%;
+    right: 20%;
+    background: rgba(240, 128, 128, 0.7);
+    animation-delay: 6s;
+}
+
+.background.light .ball:nth-child(5) {
+    top: 85%;
+    left: 65%;
+    background: rgba(135, 206, 250, 0.6);
+    animation-delay: 6s;
+}
+
+.background.light .ball:nth-child(6) {
+    top: 60%;
+    right: 10%;
+    background: rgba(255, 255, 255, 0.5);
+    animation-delay: 10s;
+}
+
+.background.light .ball:nth-child(7) {
+    top: 5%;
+    left: 80%;
+    background: rgba(186, 85, 211, 0.5);
+    animation-delay: 12s;
+}
+
+.background.light .ball:nth-child(8) {
+    top: 90%;
+    left: 5%;
+    background: rgba(135, 206, 250, 0.6);
+    animation-delay: 14s;
+}
